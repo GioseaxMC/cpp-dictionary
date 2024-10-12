@@ -1,4 +1,4 @@
-#include "../hashstd.h"
+#include "../dicts.h"
 
 int main(void){
 

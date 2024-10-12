@@ -1,4 +1,4 @@
-#include "hashstd.h" // giose hash library
+#include "dicts.h" // giose hash library
 #include <windows.h>
 
 using namespace std;
