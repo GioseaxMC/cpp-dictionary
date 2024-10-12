@@ -1,5 +1,4 @@
-#include "dicts.h" // giose hash library
-#include <windows.h>
+#include "dicts.h"
 
 using namespace std;
 
