@@ -1,10 +1,14 @@
-# include "arrays.h"
-# include <iostream>
+#include <iostream>
 
-void hash_raise(string msg){
+void raise(string msg){
     throw msg;
 }
 
+/*
+    -> dicts.h
+    ---
+    hash and node class for hashing
+*/
 template<typename T>
 class Node{
 public:
@@ -26,7 +30,7 @@ public:
                 return node;
             }
         }
-        hash_raise("HashError: Key is does not exist.");
+        raise("HashError: Key is does not exist.");
     }
 
     bool exists(char c){
@@ -48,7 +52,6 @@ public:
         return 0;
     }
 };
-
 template<typename T>
 class Hash{
 private:
@@ -73,7 +76,7 @@ public:
         if (node.is_active) {
             return get(index).val;
         } else {
-            hash_raise("KeyError: Key is non existent.");
+            raise("KeyError: Key is non existent.");
         }
     }
 
@@ -114,7 +117,7 @@ public:
             node.is_active = 0;
             return node.val;
         } else {
-            hash_raise("KeyError: Key does not exist.");
+            raise("KeyError: Key does not exist.");
         }
     }
 
